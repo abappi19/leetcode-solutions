@@ -1,5 +1,5 @@
-class Solution:
-    def maxFrequencyElements(self, nums: List[int]) -> int:
+class Solution(object):
+    def maxFrequencyElements(self, nums):
         freq = {}
 
         for num in nums:
@@ -16,5 +16,4 @@ class Solution:
                 countMaxf = countMaxf + 1
         
         return maxf* countMaxf
-
         
