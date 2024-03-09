@@ -1,11 +1,6 @@
-class Solution(object):
-    def getCommon(self, nums1, nums2):
-        """
-        :type nums1: List[int]
-        :type nums2: List[int]
-        :rtype: int
-        """
-
+class Solution:
+    def getCommon(self, nums1: List[int], nums2: List[int]) -> int:
+        
         if(nums1[len(nums1)-1] < nums2[0] or nums2[len(nums2)-1] < nums1[0]):
             return -1
         i=0
@@ -19,4 +14,3 @@ class Solution(object):
                 j = j+1 
 
         return -1
-        
