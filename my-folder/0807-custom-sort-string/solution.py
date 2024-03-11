@@ -1,13 +1,9 @@
-class Solution(object):
-    def customSortString(self, order, s):
-        """
-        :type order: str
-        :type s: str
-        :rtype: str
-        """
+class Solution:
+    def customSortString(self, order: str, s: str) -> str:
+        
         m = {}
 
-        r = ""
+        r = []
 
         for o in order:
             m[o] = 0
@@ -15,9 +11,9 @@ class Solution(object):
             if c in m:
                 m[c] = m[c] + 1
             else:
-                r = r+c
+                r.append(c)
         for c in order:
             for i in range(m[c]) :
-                r = r+c
+                r.append(c)
 
-        return r
+        return ''.join(r)
